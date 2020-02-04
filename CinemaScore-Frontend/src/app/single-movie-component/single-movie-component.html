@@ -1,0 +1,11 @@
+<div *ngIf="movie.display" class="col-xl-2 col-lg-3 col-md-4 col-sm-6 h-100">
+    <div class="card h-100 text-white bg-dark" style="width: 17rem;" data-toggle="modal" attr.data-target="#modal{{movie.id}}">
+        <img src="{{ movie.imageURL }}" class="card-img-top" height="300px">
+        <div class="card-body">
+            <h5 class="card-title"> {{ movie.title }} </h5>
+            <p class="card-text"> {{ movie.language }}</p>
+	    <!-- <a class="button" href="#popup1">Movie Info</a> -->
+        </div>
+    </div>
+</div>
+

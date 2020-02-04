@@ -1,0 +1,16 @@
+.navbar {
+    /*background: rgb(1,69,156);
+    background: linear-gradient(90deg, rgba(1,69,156,0.8463760504201681) 29%, rgba(100,24,135,0.8603816526610644) 67%);*/
+    text-align: center;
+    padding-top: 9vh;
+    padding-left: 90px;
+    height: 0px;
+    width: 95vw;
+    z-index: 2;
+}
+
+.logocenter {
+    display: block;
+    margin: auto;
+    background: linear-gradient(90deg, rgba(1,69,156,0.8463760504201681) 29%, rgba(100,24,135,0.8603816526610644) 67%);
+}

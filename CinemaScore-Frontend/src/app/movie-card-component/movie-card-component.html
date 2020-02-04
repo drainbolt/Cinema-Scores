@@ -1,0 +1,82 @@
+<div class="row mb-5">
+    <single-movie-component 
+        *ngFor="let movie of movieCards"
+        [movie]="movie">
+    </single-movie-component>
+</div>
+
+<modal-dialog
+*ngFor="let movie of movieCards"
+[movie]="movie">
+</modal-dialog>
+
+<!-- Modal -->
+<div class="modal fade" id="modalTemp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="LabelTemp">  </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header">
+                                IMDB
+                            </div>
+                            <div class="card-body">
+                                <!-- <h5 class="card-title"> Rotten Tomatoes </h5> -->
+                                <p class="card-text" id="temp-imdb">  </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Rotten Tomatoes
+                            </div>
+                            <div class="card-body">
+                                <!-- <h5 class="card-title"> Rotten Tomatoes </h5> -->
+                                <p class="card-text" id="temp-rt">  </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Metacritic
+                            </div>
+                            <div class="card-body">
+                                <!-- <h5 class="card-title"> Rotten Tomatoes </h5> -->
+                                <p class="card-text" id="temp-meta">  </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                
+            </div>
+    
+            </div>
+        </div>
+    </div>
+
+<button style="display: none;" type="button" data-toggle="modal" data-target="#modalTemp" id="tempModalBut">Launch modal</button>
+
+<hr>
+
+<div
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()">
+
+</div>
+
+
+
